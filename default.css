@@ -19,6 +19,11 @@ html,
 body {
   padding: 0;
   margin: 0;
+  scroll-behavior: smooth;
+}
+
+body * {
+  transition: 0.3s;
 }
 
 h1,
@@ -33,13 +38,9 @@ strong {
   font-weight: 500;
 }
 
-.education {
-  color: var(--mainText);
-}
-
 p,
-span,
 li,
+span,
 label,
 input,
 textarea {
@@ -80,6 +81,7 @@ h6 {
   border-bottom: 1px solid var(--borderColor);
   overflow: auto;
 }
+
 .s2 {
   background-color: var(--secondaryColor);
   border-bottom: 1px solid var(--borderColor);
@@ -95,8 +97,7 @@ h6 {
   display: grid;
   text-align: center;
   align-content: center;
-
-  min-height: 10rem;
+  min-height: 10em;
 }
 
 .intro-wrapper {
@@ -110,7 +111,6 @@ h6 {
 
   display: grid;
   grid-template-columns: 1fr 1fr;
-  /* grid-template-rows: 3rem 30rem; */
   grid-template-areas:
     "nav-wrapper nav-wrapper"
     "left-column right-column";
@@ -137,8 +137,8 @@ h6 {
 
 #navigation li {
   display: inline-block;
-  margin-left: 5px;
   margin-right: 5px;
+  margin-left: 5px;
 }
 
 .dots-wrapper {
@@ -194,8 +194,8 @@ h6 {
 .theme-dot {
   height: 30px;
   width: 30px;
+  background-color: black;
   border-radius: 50%;
-  background-color: red;
 
   margin: 5px;
   border: 2px solid var(--themeDotBorder);
@@ -237,14 +237,15 @@ h6 {
   grid-area: right-column;
   display: grid;
   align-content: center;
+
   padding-top: 50px;
   padding-bottom: 50px;
 }
 
 #preview-shadow {
   background-color: var(--previewShadow);
-  width: 300px;
-  height: 140px;
+  max-width: 300px;
+  height: 180px;
   padding-left: 30px;
   padding-top: 30px;
 }
@@ -350,7 +351,7 @@ h6 {
 
 .post-intro {
   color: #4b5156;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 #contact-form {
