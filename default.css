@@ -33,6 +33,10 @@ strong {
   font-weight: 500;
 }
 
+.education {
+  color: var(--mainText);
+}
+
 p,
 span,
 li,
@@ -331,7 +335,7 @@ h6 {
   display: block;
   width: 100%;
   height: 180px;
-  object-fit: cover;
+  /* object-fit: cover; */
 }
 
 .post-preview {
