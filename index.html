@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chandan Kumar Saha</title>
     <link rel="stylesheet" href="default.css" />
+    <link id="theme-style" rel="stylesheet" type="text/css" href="" />
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,6 +14,11 @@
       href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Russo+One&display=swap"
       rel="stylesheet"
     />
+    <!-- Font Awsome -->
+    <script
+      src="https://kit.fontawesome.com/ba84713c91.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <section class="s1">
@@ -38,10 +44,10 @@
               Personalize Theme
             </h5>
             <div id="theme-options-wrapper">
-              <div id="light-mode" class="theme-dot"></div>
-              <div id="blue-mode" class="theme-dot"></div>
-              <div id="green-mode" class="theme-dot"></div>
-              <div id="purple-mode" class="theme-dot"></div>
+              <div data-mode="light" id="light-mode" class="theme-dot"></div>
+              <div data-mode="blue" id="blue-mode" class="theme-dot"></div>
+              <div data-mode="green" id="green-mode" class="theme-dot"></div>
+              <div data-mode="purple" id="purple-mode" class="theme-dot"></div>
             </div>
             <p id="settings-note">
               *Theme settings will be saved for <br />your next visit.
@@ -53,7 +59,7 @@
                 <div id="corner-tl" class="corner"></div>
                 <div id="corner-tr" class="corner"></div>
                 <h3>What I Do</h3>
-                <p>I am a Web Developer and started learning Devops.</p>
+                <p>I am a Web Developer and learning Devops.</p>
                 <div id="corner-br" class="corner"></div>
                 <div id="corner-bl" class="corner"></div>
               </div>
@@ -104,22 +110,83 @@
           </div>
 
           <div class="social-links">
-            <img id="social_img" src="./images/github.jpg" alt="" />
+            <img id="social_img" src="./images/github-white.jpg" alt="" />
             <h3>Find me Here</h3>
-            <a target="_blank" href="">Twitter</a>
-            <br />
-            <a target="_blank" href="">Github</a>
+            <div class="all-social-links">
+              <a target="_blank" href="#"><i class="fab fa-twitter"></i></a>
+              <a target="_blank" href="#"><i class="fab fa-github"></i></a>
+              <a target="_blank" href="#"><i class="fab fa-linkedin"></i></a>
+              <a target="_blank" href="#"><i class="fab fa-instagram"></i></a>
+              <a target="_blank" href="#"><i class="fab fa-facebook"></i></a>
+              <a target="_blank" href="#"><i class="fab fa-gmail"></i></a>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <section class="s1">
-      <div class="main-container">Projects</div>
+      <div class="main-container">
+        <h3 style="text-align: center">Some of my past Projects</h3>
+
+        <div class="post-wrapper">
+          <div>
+            <div class="post">
+              <img class="thumbnail" src="./images/dash.jpg" alt="" />
+              <div class="post-preview">
+                <h6 class="post-title">Post Title 1</h6>
+                <p class="post-intro">
+                  This is a sample sentence. See more text.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="post">
+              <img class="thumbnail" src="./images/dash.jpg" alt="" />
+              <div class="post-preview">
+                <h6 class="post-title">Post Title 2</h6>
+                <p class="post-intro">
+                  This is a sample sentence. See more text.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="post">
+              <img class="thumbnail" src="./images/dash.jpg" alt="" />
+              <div class="post-preview">
+                <h6 class="post-title">Post Title 3</h6>
+                <p class="post-intro">
+                  This is a sample sentence. See more text.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="s2">
-      <div class="main-container">Contact me</div>
+      <div class="main-container">
+        <h3 style="text-align: center">Get In Touch</h3>
+        <form action="" id="contact-form">
+          <label>Name</label>
+          <input class="input-field" type="text" name="name" />
+
+          <label>Subject</label>
+          <input class="input-field" type="text" name="subject" />
+
+          <label>Email</label>
+          <input class="input-field" type="text" name="email" />
+
+          <label>Message</label>
+          <textarea class="input-field" name="message"></textarea>
+
+          <input id="submit-btn" type="submit" value="Send" />
+        </form>
+      </div>
     </section>
+    <script src="./script.js"></script>
   </body>
 </html>
