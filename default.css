@@ -38,6 +38,10 @@ strong {
   font-weight: 500;
 }
 
+.education{
+  color: var(--mainText);
+}
+
 p,
 li,
 span,
