@@ -99,7 +99,7 @@
             <p>
               Web Developer with primary focus on <br />
               Backend Development and React
-              <a target="_blank" href="#"> Download Resume</a>
+              <a target="_blank" href="./Resume_2022.pdf"> Download Resume</a>
             </p>
 
             <div id="skills">
@@ -236,23 +236,73 @@
     <section class="s2">
       <div class="main-container">
         <h3 style="text-align: center">Get In Touch</h3>
-        <form action="" id="contact-form">
+        <form
+          action=""
+          id="contact-form"
+          onsubmit="sendEmail();reset();return false;"
+        >
           <label>Name</label>
-          <input class="input-field" type="text" name="name" />
+          <input
+            class="input-field"
+            id="form-name"
+            type="text"
+            name="name"
+            required
+          />
 
           <label>Subject</label>
-          <input class="input-field" type="text" name="subject" />
+          <input
+            class="input-field"
+            id="form-subject"
+            type="text"
+            name="subject"
+            required
+          />
 
           <label>Email</label>
-          <input class="input-field" type="text" name="email" />
+          <input
+            class="input-field"
+            id="form-email"
+            type="text"
+            name="email"
+            required
+          />
 
           <label>Message</label>
-          <textarea class="input-field" name="message"></textarea>
+          <textarea
+            class="input-field"
+            id="form-message"
+            name="message"
+            required
+          ></textarea>
 
           <input id="submit-btn" type="submit" value="Send" />
         </form>
       </div>
     </section>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="./script.js"></script>
+    <script>
+      function sendEmail() {
+        Email.send({
+          Host: "smtp.yourisp.com",
+          Username: "chandankumarshah8@gmail.com",
+          Password: "0C45EA7DECFA82E727BD2FB5FDAD7814262A",
+          To: "chandankumar5emails@gmail.com",
+          From: "chandankumarshah8@gmail.com",
+          Subject: "Subject",
+          // From: document.getElementById("form-email").value,
+          //Subject: document.getElementById("form-subect").value,
+          Body: "Message",
+          // Body:
+          //   "Name: " +
+          //   document.getElementById("form-name").value +
+          //   "<br> Email: " +
+          //   document.getElementById("form-email").value +
+          //   "<br> Message: " +
+          //   document.getElementById("form-message").value,
+        }).then((message) => alert("OK"));
+      }
+    </script>
   </body>
 </html>
